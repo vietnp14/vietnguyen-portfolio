@@ -1,6 +1,10 @@
 @import '../../sass/media-query';
 
 .section-stories {
+  @include mobile {
+    padding-top: 0 !important;
+  }
+
   .stories__content {
     display: grid;
     gap: 1rem;

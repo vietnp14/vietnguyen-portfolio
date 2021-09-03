@@ -25,8 +25,8 @@ const NavItems = [
     icon: <UilUser />,
   },
   {
-    title: 'Blogs',
-    href: '#blogs',
+    title: 'Journey',
+    href: '#journey',
     icon: <UilUser />,
   },
   {

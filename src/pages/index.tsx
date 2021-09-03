@@ -1,6 +1,7 @@
 /* eslint-disable import/extensions */
 import * as React from 'react';
 import AboutMe from '../components/AboutMe';
+import Journey from '../components/Journey';
 import Navbar from '../components/Navbar';
 import Skills from '../components/Skills';
 import Stories from '../components/Stories';
@@ -16,6 +17,7 @@ const IndexPage = () => {
         <Stories />
         <AboutMe />
         <Skills />
+        <Journey />
         <div id="contactme">
           <Stories />
         </div>

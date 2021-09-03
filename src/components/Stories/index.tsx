@@ -65,7 +65,7 @@ const Stories = () => {
             <h1 className="stories__content-text-title">Hi, I'm Viet Nguyen.</h1>
             <h3 className="stories__content-text-subtitle">Fullstack developer</h3>
             <p className="stories__content-text-description">
-              <p>I’m a young and self-motivated individual looking to advance my future career as a software engineer.</p>
+              I’m a young and self-motivated individual looking to advance my future career as a software engineer.
             </p>
             <a className="btn btn-primary btn-contact-me" href="#contactme">
               Contact Me&nbsp;
