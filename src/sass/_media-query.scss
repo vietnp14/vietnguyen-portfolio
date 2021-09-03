@@ -1,0 +1,20 @@
+/* Desktop Screen */
+@mixin desktop {
+  @media only screen and (min-width: 1200px) {
+    @content;
+  }
+}
+
+/* Tablet */
+@mixin tablet {
+  @media only screen and (min-width: 600px) {
+    @content;
+  }
+}
+
+/* Mobile Screen */
+@mixin mobile {
+  @media only screen and (max-width: 600px) {
+    @content;
+  }
+}

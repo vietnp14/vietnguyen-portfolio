@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import '~bootstrap/scss/bootstrap';
+@import './button';
+@import './media-query.scss';
+
+:root {
+  /* Header */
+  --header-height: 3.5rem;
+
+  /* ======= Colors ======= */
+  --base-color: 250;
+  --primary-color: hsl(var(--base-color), 69%, 60%);
+  --primary-color-dark: hsl(var(--base-color), 70%, 55%);
+  --secondary-color: hsl(var(--base-color), 57%, 53%);
+  --secondary-color-lighter: hsl(var(--base-color), 92%, 85%);
+
+  --title-color: hsl(var(--base-color), 8%, 15%);
+  --text-color: hsl(var(--base-color), 8%, 45%);
+  --text-color-light: hsl(var(--base-color), 8%, 65%);
+  --input-color: hsl(var(--base-color), 70%, 96%);
+  --body-color: hsl(var(--base-color), 60%, 99%);
+  --container-color: #FFF;
+
+  --big-font-size: 2rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1.125rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+  --smaller-font-size: .75rem;
+
+  --font-weight-medium: 500;
+  --font-weight-semi-bold: 600;
+}
+
+@media screen and (min-width: 968px) {
+  :root {
+    --big-font-size: 3rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+    --smaller-font-size: .813rem;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--container-color);
+  color: var(--text-color);
+  font-size: var(--normal-font-size);
+
+  @include tablet {
+    margin: var(--header-height) 0 0 0;
+  }
+
+  @include desktop {
+    margin: var(--header-height) 0 0 0;
+  }
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--title-color);
+  font-weight: var(--font-weight-semi-bold);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.main {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  flex-direction: column;
+
+  @include desktop {
+    width: 100%;
+  }
+
+  @include tablet {
+    width: 100%;
+  }
+
+  .section {
+    padding: 2rem 0 var(--header-height);
+    // height: 100vh;
+
+    .container {
+      padding: 0;
+    }
+
+    &__title {
+      text-align: center;
+      font-size: var(--h1-font-size);
+    }
+
+    &__subtitle {
+      display: block;
+      text-align: center;
+      font-size: var(--small-font-size);
+      margin-bottom: 3rem;
+    }
+  }
+}
