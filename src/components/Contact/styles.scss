@@ -4,13 +4,13 @@
   .contact {
     &__content {
       &-data {
-        row-gap: 3rem;
+        row-gap: .5rem;
       }
     }
 
     &__information {
       display: flex;
-      margin-bottom: 2rem;
+      margin-bottom: 1.5rem;
 
       &-title {
         font-size: var(--h3-font-size);
@@ -27,6 +27,35 @@
         margin-right: .75rem;
         width: 32px;
         height: 32px;
+      }
+    }
+
+    &__form {
+      gap: 1rem;
+
+      .btn-contact-submit {
+        border-radius: .5rem;
+      }
+
+      .form-floating {
+        input,
+        textarea {
+          padding: 2.5rem 1.5rem 1rem 1.5rem;
+          background-color: var(--input-color);
+          color: var(--text-color);
+          border: none;
+
+          resize: vertical;
+        }
+
+        textarea {
+          min-height: 10rem;
+        }
+
+        label {
+          font-size: var(--h3-font-size);
+          opacity: 1;
+        }
       }
     }
   }

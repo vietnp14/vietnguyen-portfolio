@@ -5,11 +5,6 @@ import './styles.scss';
 
 const NavItems = [
   {
-    title: 'Home',
-    href: '#',
-    icon: <UilEstate />,
-  },
-  {
     title: 'Stories',
     href: '#stories',
     icon: <UilUser />,
@@ -20,17 +15,22 @@ const NavItems = [
     icon: <UilUser />,
   },
   {
-    title: 'Skills',
-    href: '#skills',
-    icon: <UilUser />,
-  },
-  {
     title: 'Journey',
     href: '#journey',
     icon: <UilUser />,
   },
   {
-    title: 'Contactme',
+    title: 'Skills',
+    href: '#skills',
+    icon: <UilUser />,
+  },
+  {
+    title: 'Project',
+    href: '#projects',
+    icon: <UilUser />,
+  },
+  {
+    title: 'Contact Me',
     href: '#contactme',
     icon: <UilUser />,
   },
@@ -39,22 +39,23 @@ const NavItems = [
 const Navbar = () => {
   const [collapsed, setCollapsed] = useState(true);
   const [isDarkThem, setIsDarkTheme] = useState(true);
-  const navMenu = useRef(null);
+  const navMenu = useRef<HTMLDivElement>(null);
 
   const handleCollapseToggle = () => {
     if (collapsed) {
-      (navMenu.current as any).classList.remove('bottom-0');
+      navMenu.current?.classList.remove('bottom-0');
     } else {
-      (navMenu.current as any).classList.add('bottom-0');
+      navMenu.current?.classList.add('bottom-0');
     }
+
     setCollapsed(!collapsed);
   };
 
   useEffect(() => {
-    if (isDarkThem) {
-      document.body.classList.add('dark-theme');
+    if (!isDarkThem) {
+      document.body.classList.add('light-theme');
     } else {
-      document.body.classList.remove('dark-theme');
+      document.body.classList.remove('light-theme');
     }
   }, [isDarkThem]);
 

@@ -11,6 +11,7 @@ const projects = [
       className="carousel__image"
       src="../../images/botstar-stripe-payment.png"
       alt="Stripe V2"
+      loading="eager"
     />,
   },
   {
@@ -20,6 +21,7 @@ const projects = [
       className="carousel__image"
       src="../../images/botstar-csv-import.png"
       alt="Stripe V2"
+      loading="eager"
     />,
   },
   {
@@ -29,6 +31,7 @@ const projects = [
       className="carousel__image"
       src="../../images/botstar-public-api.png"
       alt="Public API"
+      loading="eager"
     />,
   },
   {
@@ -38,6 +41,7 @@ const projects = [
       className="carousel__image"
       src="../../images/psy-care.png"
       alt="PsyCare"
+      loading="eager"
     />,
   },
 ];

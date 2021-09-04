@@ -15,10 +15,13 @@
       }
 
       &__image {
-        border-radius: 1rem;
         width: 300px;
         display: flex;
         margin: 0 auto;
+
+        img {
+          border-radius: 1rem;
+        }
 
         @include tablet {
           width: 400px;

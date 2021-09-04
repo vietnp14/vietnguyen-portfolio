@@ -23,11 +23,12 @@
         margin: .5rem;
         width: fit-content;
 
+        transition: .5s;
+
         &:hover {
           color: var(--hover-text-color);
           background-color: var(--hover-background-color);
           border-radius: .75rem;
-          transition: .5s;
         }
 
         @include mobile {
@@ -71,12 +72,7 @@
         padding: 1rem 1.25rem;
         border-radius: .75rem;
         font-weight: var(--font-weight-medium);
-
-        &:hover {
-          color: var(--hover-text-color);
-          background-color: var(--hover-background-color);
-          transition: .5s;
-        }
+        transition: .5s;
 
         @include mobile {
           svg {

@@ -63,7 +63,7 @@ const Stories = () => {
 
           <div className="stories__content-text">
             <h1 className="stories__content-text-title">Hi, I'm Viet Nguyen.</h1>
-            <h3 className="stories__content-text-subtitle">Fullstack developer</h3>
+            <h3 className="stories__content-text-subtitle">Fullstack Developer</h3>
             <p className="stories__content-text-description">
               I’m a young and self-motivated individual looking to advance my future career as a software engineer.
             </p>
