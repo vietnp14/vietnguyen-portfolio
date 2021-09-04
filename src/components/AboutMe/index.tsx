@@ -6,7 +6,7 @@ import './styles.scss';
 const AboutMe = () => {
   return (
     <>
-      <div className="section section-about" id="about">
+      <section className="section section-about" id="about">
         <div className="about__content container">
           <h2 className="section__title">About Me</h2>
           <span className="section__subtitle">My Introduction</span>
@@ -49,7 +49,7 @@ const AboutMe = () => {
             </a>
           </div>
         </div>
-      </div>
+      </section>
     </>
   );
 };

@@ -2,6 +2,7 @@
 import * as React from 'react';
 import AboutMe from '../components/AboutMe';
 import Contact from '../components/Contact';
+import Footer from '../components/Footer';
 import Journey from '../components/Journey';
 import Navbar from '../components/Navbar';
 import Projects from '../components/Projects';
@@ -22,6 +23,7 @@ const IndexPage = () => {
         <Skills />
         <Projects />
         <Contact />
+        <Footer />
       </main>
     </>
   );

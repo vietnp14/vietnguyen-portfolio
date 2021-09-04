@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/interactive-supports-focus */
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { UilUser, UilEstate, UilMultiply, UilApps } from '@iconscout/react-unicons';
 import './styles.scss';
 
@@ -41,12 +41,12 @@ const Navbar = () => {
   const [_unMounted, _setUnMounted] = useState(false);
   const navMenu = useRef(null);
 
-  // useEffect(() => {
-  //   document
-  //   if (!unMounted) {
-  //     window
-  //   }
-  // });
+  const sections = document.body.querySelectorAll('section[id]');
+
+  useEffect(() => {
+    console.log('Sections : ', sections);
+    // window.addEventListener('scroll', )
+  }, []);
 
   const handleCollapseToggle = () => {
     if (collapsed) {

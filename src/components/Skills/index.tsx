@@ -32,7 +32,7 @@ const technicalSkills = [
 const Skills = () => {
   return (
     <>
-      <div className="section section-skills" id="skills">
+      <section className="section section-skills" id="skills">
         <div className="skills__content container d-grid">
           <h2 className="section__title">Skills</h2>
           <span className="section__subtitle">Technical Skills</span>
@@ -48,7 +48,7 @@ const Skills = () => {
             }
           </div>
         </div>
-      </div>
+      </section>
     </>
   );
 };

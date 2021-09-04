@@ -75,11 +75,11 @@ const ControlledCarousel = () => {
 const Projects = () => {
   return (
     <>
-      <div className="section section__projects" id="projects">
+      <section className="section section__projects" id="projects">
         <div className="projects__content container grid">
           <ControlledCarousel />
         </div>
-      </div>
+      </section>
     </>
   );
 };

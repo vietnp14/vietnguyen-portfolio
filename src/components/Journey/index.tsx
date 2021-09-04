@@ -31,7 +31,7 @@ const works = [
 const Journey = () => {
   return (
     <>
-      <div className="section section__journey" id="journey">
+      <section className="section section__journey" id="journey">
         <div className="journey__content container d-grid">
           <h1 className="section__title">Journey</h1>
           <span className="section__subtitle">My Personal Journey</span>
@@ -84,7 +84,7 @@ const Journey = () => {
                       }
 
                       return (
-                        <div className="journey__item" style={{ textAlign: 'right' }}>
+                        <div key={index} className="journey__item" style={{ textAlign: 'right' }}>
                           <div>
                             <h3 className="journey__item-title">{title}</h3>
                             <span className="journey__item-subtitle">{subtitle}</span>
@@ -106,7 +106,7 @@ const Journey = () => {
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </>
   );
 };
