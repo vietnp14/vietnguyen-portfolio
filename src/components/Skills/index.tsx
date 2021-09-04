@@ -9,23 +9,23 @@ const technicalSkills = [
   },
   {
     title: 'HTML',
-    icon: <img src="https://img.icons8.com/color/96/000000/html-5--v1.png" alt="html" />,
+    icon: <StaticImage src="../../images/javascript.svg" alt="javascript" loading="eager" />,
   },
   {
     title: 'CSS',
-    icon: <img src="https://img.icons8.com/color/96/000000/css3.png" alt="css" />,
+    icon: <StaticImage src="../../images/javascript.svg" alt="javascript" loading="eager" />,
   },
   {
     title: 'Angular2+',
-    icon: <img src="https://img.icons8.com/color/96/000000/angularjs.png" alt="angular" />,
+    icon: <StaticImage src="../../images/javascript.svg" alt="javascript" loading="eager" />,
   },
   {
     title: 'Reactjs',
-    icon: <img src="https://img.icons8.com/nolan/96/react-native.png" alt="reactjs" />,
+    icon: <StaticImage src="../../images/javascript.svg" alt="javascript" loading="eager" />,
   },
   {
     title: 'Nodejs',
-    icon: <img src="https://img.icons8.com/color/96/000000/nodejs.png" alt="nodejs" />,
+    icon: <StaticImage src="../../images/javascript.svg" alt="javascript" loading="eager" />,
   },
 ];
 

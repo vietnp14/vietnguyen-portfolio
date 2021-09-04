@@ -3,6 +3,7 @@ import * as React from 'react';
 import AboutMe from '../components/AboutMe';
 import Journey from '../components/Journey';
 import Navbar from '../components/Navbar';
+import Projects from '../components/Projects';
 import Skills from '../components/Skills';
 import Stories from '../components/Stories';
 import '../sass/index.scss';
@@ -16,8 +17,9 @@ const IndexPage = () => {
       <main className="main">
         <Stories />
         <AboutMe />
-        <Skills />
         <Journey />
+        <Skills />
+        <Projects />
         <div id="contactme">
           <Stories />
         </div>

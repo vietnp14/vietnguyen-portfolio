@@ -11,7 +11,7 @@
   padding: 1rem 1.5rem;
   background-color: var(--body-color);
 
-  @media screen and (min-width: 800px) {
+  @include tablet {
     top: 0;
     bottom: unset;
   }

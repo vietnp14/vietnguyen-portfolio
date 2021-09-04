@@ -1,0 +1,51 @@
+@import '../../sass/media-query';
+
+.section__projects {
+  .projects__content {
+    .carousel {
+      &-indicators {
+        bottom: -4rem;
+
+        button {
+          width: 1rem;
+          height: 1rem;
+          border-radius: 50%;
+          background-color: var(--primary-color);
+        }
+      }
+
+      &__image {
+        border-radius: 1rem;
+        width: 300px;
+        display: flex;
+        margin: 0 auto;
+
+        @include tablet {
+          width: 400px;
+        }
+
+        @include desktop {
+          width: 500px;
+        }
+      }
+
+      &__content {
+        text-align: center;
+
+        &-title {
+          margin-top: 1rem;
+        }
+      }
+
+      &-control {
+        &-prev {
+          left: -.75rem;
+        }
+
+        &-next {
+          right: -.75rem;
+        }
+      }
+    }
+  }
+}

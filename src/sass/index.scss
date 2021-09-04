@@ -60,6 +60,7 @@ body {
   background-color: var(--container-color);
   color: var(--text-color);
   font-size: var(--normal-font-size);
+  margin: 0 0 var(--header-height) 0 ;
 
   @include tablet {
     margin: var(--header-height) 0 0 0;
@@ -97,18 +98,10 @@ img {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   flex-direction: column;
-
-  @include desktop {
-    width: 100%;
-  }
-
-  @include tablet {
-    width: 100%;
-  }
+  width: 100%;
 
   .section {
     padding: 2rem 0 var(--header-height);
-    // height: 100vh;
 
     .container {
       padding: 0;
