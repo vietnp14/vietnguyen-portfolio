@@ -74,7 +74,7 @@ const Stories = () => {
           </div>
 
           <div className="stories__scroll">
-            <a href="#" className="btn btn-scroll-down">
+            <a href="#about" className="btn btn-scroll-down" id="btn-scroll-down">
               <UilMouseAlt />&nbsp;
               <span>Scroll down&nbsp;</span>
               <UilArrowDown />

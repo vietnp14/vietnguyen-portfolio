@@ -4,12 +4,16 @@
   width: 100%;
   position: fixed;
   height: var(--header-height);
-  z-index: 1;
+  z-index: 100;
 
   bottom: 0;
   left: 0;
   padding: 1rem 1.5rem;
   background-color: var(--body-color);
+
+  &__scroll {
+    box-shadow: 0 -1px 4px rgba(0, 0, 0, .15);
+  }
 
   @include tablet {
     top: 0;
@@ -22,7 +26,7 @@
   }
 
   .nav {
-    z-index: 1;
+    z-index: 100;
     --item--space: 20px;
 
     &__menu {
@@ -67,7 +71,8 @@
     }
 
     &__logo,
-    &__toggle {
+    &__toggle,
+    &__theme {
       color: var(--title-color);
       font-weight: var(--font-weight-semi-bold);
       cursor: pointer;
@@ -75,6 +80,10 @@
       &:hover {
         color: var(--primary-color);
       }
+    }
+
+    &__theme {
+      margin-right: .5rem;
     }
 
     &__link {
@@ -86,7 +95,8 @@
       font-size: var(--small-font-size);
       font-weight: var(--font-weight-medium);
 
-      &:hover {
+      &:hover,
+      &.active {
         color: var(--primary-color);
       }
 

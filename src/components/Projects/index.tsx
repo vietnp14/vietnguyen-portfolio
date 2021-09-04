@@ -50,16 +50,16 @@ const ControlledCarousel = () => {
   };
 
   return (
-    <Carousel activeIndex={index} onSelect={handleSelect}>
+    <Carousel
+      activeIndex={index}
+      onSelect={handleSelect}
+      interval={1700}
+      nextIcon={<></>}
+    >
       {
         projects.map(({ title, subtitle, img }, i) => (
           <Carousel.Item key={i}>
             {img}
-
-            {/* <Carousel.Caption>
-              <h3>First slide label</h3>
-              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-            </Carousel.Caption> */}
 
             <div className="carousel__content">
               <h3 className="carousel__content-title">{title}</h3>
@@ -77,6 +77,9 @@ const Projects = () => {
     <>
       <section className="section section__projects" id="projects">
         <div className="projects__content container grid">
+          <h2 className="section__title">Projects</h2>
+          <span className="section__subtitle">My Projects Experience</span>
+
           <ControlledCarousel />
         </div>
       </section>

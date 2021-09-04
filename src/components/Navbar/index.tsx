@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/interactive-supports-focus */
 import React, { useState, useRef, useEffect } from 'react';
-import { UilUser, UilEstate, UilMultiply, UilApps } from '@iconscout/react-unicons';
+import { UilUser, UilEstate, UilMultiply, UilApps, UilMoon, UilBrightness } from '@iconscout/react-unicons';
 import './styles.scss';
 
 const NavItems = [
@@ -38,15 +38,8 @@ const NavItems = [
 
 const Navbar = () => {
   const [collapsed, setCollapsed] = useState(true);
-  const [_unMounted, _setUnMounted] = useState(false);
+  const [isDarkThem, setIsDarkTheme] = useState(true);
   const navMenu = useRef(null);
-
-  const sections = document.body.querySelectorAll('section[id]');
-
-  useEffect(() => {
-    console.log('Sections : ', sections);
-    // window.addEventListener('scroll', )
-  }, []);
 
   const handleCollapseToggle = () => {
     if (collapsed) {
@@ -57,6 +50,14 @@ const Navbar = () => {
     setCollapsed(!collapsed);
   };
 
+  useEffect(() => {
+    if (isDarkThem) {
+      document.body.classList.add('dark-theme');
+    } else {
+      document.body.classList.remove('dark-theme');
+    }
+  }, [isDarkThem]);
+
   return (
     <>
       <header className="header" id="header">
@@ -65,11 +66,11 @@ const Navbar = () => {
           <div ref={navMenu} className="nav__menu" id="nav-menu">
             <ul className="nav__list">
               {
-                NavItems.map((item, index) => (
+                NavItems.map(({ href, icon, title }, index) => (
                   <li key={index} className="nav__list-item">
-                    <a href={item.href} className="nav__link" role="button">
-                      <div className="nav__link-icon">{item.icon}</div>
-                      {item.title}
+                    <a href={href} className="nav__link" role="button" id={`nav__${href}`}>
+                      <div className="nav__link-icon">{icon}</div>
+                      {title}
                     </a>
                   </li>
                 ))
@@ -79,9 +80,16 @@ const Navbar = () => {
               </a>
             </ul>
           </div>
-          <a onClick={() => handleCollapseToggle()} className="nav__toggle" role="button">
-            <UilApps />
-          </a>
+
+          <div>
+            <a onClick={() => setIsDarkTheme(!isDarkThem)} className="nav__theme" role="button">
+              { isDarkThem ? <UilMoon /> : <UilBrightness />}
+            </a>
+
+            <a onClick={() => handleCollapseToggle()} className="nav__toggle" role="button">
+              <UilApps />
+            </a>
+          </div>
         </nav>
       </header>
     </>

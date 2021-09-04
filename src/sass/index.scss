@@ -10,9 +10,12 @@
   /* ======= Colors ======= */
   --base-color: 250;
   --primary-color: hsl(var(--base-color), 69%, 60%);
-  --primary-color-dark: hsl(var(--base-color), 70%, 55%);
-  --secondary-color: hsl(var(--base-color), 57%, 53%);
-  --secondary-color-lighter: hsl(var(--base-color), 92%, 85%);
+  --secondary-color: hsl(var(--base-color), 69%, 61%);
+  --primary-color-alt: hsl(var(--base-color), 57%, 53%);
+  --primary-color-light: hsl(var(--base-color), 92%, 85%);
+
+  --hover-background-color: #FFF;
+  --hover-text-color: hsl(var(--base-color), 69%, 60%);
 
   --title-color: hsl(var(--base-color), 8%, 15%);
   --text-color: hsl(var(--base-color), 8%, 45%);
@@ -57,10 +60,10 @@ html {
 }
 
 body {
-  background-color: var(--container-color);
+  background-color: var(--body-color);
   color: var(--text-color);
   font-size: var(--normal-font-size);
-  margin: 0 0 var(--header-height) 0 ;
+  margin: 0 0 var(--header-height) 0;
 
   @include tablet {
     margin: var(--header-height) 0 0 0;
@@ -69,6 +72,19 @@ body {
   @include desktop {
     margin: var(--header-height) 0 0 0;
   }
+}
+
+body.dark-theme {
+  --primary-color: hsl(var(--base-color), 35%, 50%);
+  --title-color: hsl(var(--base-color), 8%, 95%);
+  --text-color: hsl(var(--base-color), 8%, 75%);
+  --input-color: hsl(var(--base-color), 29%, 16%);
+
+  --hover-text-color: hsl(var(--base-color), 50%, 50%);
+  --hover-background-color: hsl(var(--base-color), 50%, 90%);
+
+  --body-color: hsl(var(--base-color), 30%, 22%);
+  --container-color: hsl(var(--base-color), 29%, 16%);
 }
 
 h1,
@@ -117,6 +133,29 @@ img {
       text-align: center;
       font-size: var(--small-font-size);
       margin-bottom: 2.5rem;
+    }
+  }
+
+  .btn-scroll-up {
+    position: fixed;
+    bottom: 5rem;
+    right: 1.5rem;
+    padding: .375rem .5rem;
+
+    border-radius: .5rem;
+    z-index: 100;
+
+    @include tablet {
+      bottom: 3rem;
+    }
+
+    @include desktop {
+      bottom: 3rem;
+    }
+
+    &:hover {
+      color: var(--hover-text-color);
+      background-color: var(--hover-background-color);
     }
   }
 }

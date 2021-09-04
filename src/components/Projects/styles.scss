@@ -7,8 +7,8 @@
         bottom: -4rem;
 
         button {
-          width: 1rem;
-          height: 1rem;
+          width: 14px;
+          height: 14px;
           border-radius: 50%;
           background-color: var(--primary-color);
         }
@@ -34,16 +34,19 @@
 
         &-title {
           margin-top: 1rem;
+          font-size: var(--h3-font-size);
+        }
+
+        &-subtitle {
+          font-size: var(--small-font-size);
         }
       }
 
       &-control {
-        &-prev {
-          left: -.75rem;
-        }
 
+        &-prev,
         &-next {
-          right: -.75rem;
+          display: none;
         }
       }
     }

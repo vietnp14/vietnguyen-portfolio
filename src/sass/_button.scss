@@ -10,8 +10,9 @@
     border-color: var(--primary-color);
 
     &:hover, &:focus {
-      background-color: var(--primary-color-dark);
-      border-color: var(--primary-color-dark);
+      background-color: var(--hover-background-color);
+      border-color: var(--hover-text-color);
+      box-shadow: none;
     }
   }
 }
