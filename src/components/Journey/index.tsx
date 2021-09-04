@@ -19,12 +19,12 @@ const works = [
   {
     title: 'Intern Automation Tester',
     subtitle: 'FPT Software',
-    calendar: '5/2020 - 09/2020',
+    calendar: '05/2020 - 09/2020',
   },
   {
     title: 'Fullstack Developer',
     subtitle: 'BotStar',
-    calendar: '9/2020 - 07/2021',
+    calendar: '09/2020 - 07/2021',
   },
 ];
 

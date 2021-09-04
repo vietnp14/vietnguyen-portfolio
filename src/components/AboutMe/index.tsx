@@ -43,7 +43,7 @@ const AboutMe = () => {
           </div>
 
           <div className="about__content-button">
-            <a download="" className="btn btn-primary btn-download-cv">
+            <a download href="../../assets/CV-NguyenPhuongViet.pdf" className="btn btn-primary btn-download-cv">
               Download My CV&nbsp;
               <UilFileDownload />
             </a>

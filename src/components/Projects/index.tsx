@@ -9,7 +9,16 @@ const projects = [
     subtitle: '',
     img: <StaticImage
       className="carousel__image"
-      src="../../images/bs-stripe.png"
+      src="../../images/botstar-stripe-payment.png"
+      alt="Stripe V2"
+    />,
+  },
+  {
+    title: 'BotStar CMS Import',
+    subtitle: '',
+    img: <StaticImage
+      className="carousel__image"
+      src="../../images/botstar-csv-import.png"
       alt="Stripe V2"
     />,
   },
@@ -18,17 +27,17 @@ const projects = [
     subtitle: '',
     img: <StaticImage
       className="carousel__image"
-      src="../../images/bs-public-api.png"
+      src="../../images/botstar-public-api.png"
       alt="Public API"
     />,
   },
   {
-    title: 'Capstone Project',
+    title: 'PsyCare',
     subtitle: '',
     img: <StaticImage
       className="carousel__image"
-      src="../../images/capstone-project.png"
-      alt="Capstone Project"
+      src="../../images/psy-care.png"
+      alt="PsyCare"
     />,
   },
 ];
