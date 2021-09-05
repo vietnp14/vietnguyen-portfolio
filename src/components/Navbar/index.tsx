@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/interactive-supports-focus */
 import React, { useState, useRef, useEffect } from 'react';
-import { UilUser, UilEstate, UilMultiply, UilApps, UilMoon, UilBrightness } from '@iconscout/react-unicons';
+import { UilUser, UilMultiply, UilApps, UilMoon, UilBrightness } from '@iconscout/react-unicons';
 import './styles.scss';
 
 const NavItems = [
@@ -63,31 +63,56 @@ const Navbar = () => {
     <>
       <header className="header" id="header">
         <nav className="nav d-flex justify-content-between align-items-center">
-          <a href="#" className="nav__logo">Viet Nguyen</a>
+          <a onClick={(e) => { e.stopPropagation(); }} href="#" className="nav__logo">Viet Nguyen</a>
           <div ref={navMenu} className="nav__menu" id="nav-menu">
             <ul className="nav__list">
               {
                 NavItems.map(({ href, icon, title }, index) => (
                   <li key={index} className="nav__list-item">
-                    <a href={href} className="nav__link" role="button" id={`nav__${href}`}>
+                    <a
+                      href={href}
+                      className="nav__link"
+                      id={`nav__${href}`}
+                      onClick={() => handleCollapseToggle()}
+                    >
                       <div className="nav__link-icon">{icon}</div>
                       {title}
                     </a>
                   </li>
                 ))
               }
-              <a onClick={() => handleCollapseToggle()} className="nav__link nav__close" role="button">
+              <a
+                onClick={(e) => {
+                  e.stopPropagation();
+                  handleCollapseToggle();
+                }}
+                className="nav__link nav__close"
+                role="button"
+              >
                 <UilMultiply width={18} height={18} />
               </a>
             </ul>
           </div>
 
           <div>
-            <a onClick={() => setIsDarkTheme(!isDarkThem)} className="nav__theme" role="button">
+            <a
+              onClick={(e) => {
+                e.stopPropagation();
+                setIsDarkTheme(!isDarkThem);
+              }}
+              className="nav__theme"
+              role="button"
+            >
               { isDarkThem ? <UilMoon /> : <UilBrightness />}
             </a>
 
-            <a onClick={() => handleCollapseToggle()} className="nav__toggle" role="button">
+            <a
+              onClick={(e) => {
+                e.stopPropagation();
+                handleCollapseToggle();
+              }}
+              className="nav__toggle"
+            >
               <UilApps />
             </a>
           </div>

@@ -69,13 +69,13 @@ const IndexPage = () => {
         {/* Contact Section */}
         <Contact />
 
-        {/* Footer */}
-        <Footer />
-
         <a href="#" className="btn btn-primary btn-scroll-up">
           <UilArrowUp />
         </a>
       </main>
+
+      {/* Footer */}
+      <Footer />
     </>
   );
 };

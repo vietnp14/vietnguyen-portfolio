@@ -19,6 +19,10 @@
         display: flex;
         margin: 0 auto;
 
+        @include small-mobile {
+          width: 250px;
+        }
+
         img {
           border-radius: 1rem;
         }

@@ -1,7 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { UilOutgoingCall, UilEnvelopes, UilLocationPoint } from '@iconscout/react-unicons';
-import { FloatingLabel, Form } from 'react-bootstrap';
+import { UilOutgoingCall, UilEnvelopes, UilLocationPoint, UilSpinnerAlt } from '@iconscout/react-unicons';
+import { FloatingLabel, Form, Toast, ToastContainer } from 'react-bootstrap';
 import './styles.scss';
+import axios from 'axios';
 
 const contactInfo = [
   {
@@ -16,7 +17,7 @@ const contactInfo = [
   },
   {
     title: 'Location',
-    subtitle: 'Da Nang, Viet Nam ',
+    subtitle: 'Da Nang, Viet Nam.',
     icon: <UilLocationPoint />,
   },
 ];
@@ -25,12 +26,40 @@ const Contact = () => {
   const textareaRef = useRef<HTMLTextAreaElement>(null);
   const [name, setName] = useState();
   const [email, setEmail] = useState();
+  const [subject, setSubject] = useState();
   const [message, setMessage] = useState();
+  const [loading, setLoading] = useState(false);
+  const [showSuccess, setShowSuccess] = useState(false);
+  const [showFail, setShowFail] = useState(false);
+  console.log('Show success : ', showSuccess);
+  const toggleShowSuccess = () => setShowSuccess(!showSuccess);
+  const toggleShowFail = () => setShowFail(!showFail);
 
-  const handleContactForm = (event: any) => {
-    event.preventDefault();
-    console.log(`Name: ${name} -- email: ${email} -- message: ${message}`);
-    event.target.reset();
+  const handleContactForm = async (event: any) => {
+    try {
+      event.preventDefault();
+      const info = await axios.post(
+        'https://portforlio-backend.herokuapp.com/send-email',
+        {
+          from: email || '',
+          subject: `${subject || ''} --- ${name || ''}`,
+          text: message || '',
+        },
+      );
+
+      setTimeout(() => {
+        setLoading(false);
+      }, 2500);
+      console.log('Send message success : ', info.data);
+      toggleShowSuccess();
+      event.target.reset();
+    } catch (err) {
+      console.debug('Send Contact Error : ', err);
+      toggleShowFail();
+      setTimeout(() => {
+        setLoading(false);
+      }, 2500);
+    }
   };
 
   useEffect(() => {
@@ -81,6 +110,8 @@ const Contact = () => {
                 <Form.Control
                   className="contact__form-item"
                   name="name"
+                  disabled={loading}
+                  required
                   onChange={(event: any) => setName(event.target.value)}
                 />
               </FloatingLabel>
@@ -90,7 +121,19 @@ const Contact = () => {
                   className="contact__form-item"
                   type="email"
                   name="email"
+                  required
+                  disabled={loading}
                   onChange={(event: any) => setEmail(event.target.value)}
+                />
+              </FloatingLabel>
+
+              <FloatingLabel label="Subject">
+                <Form.Control
+                  className="contact__form-item"
+                  name="subject"
+                  disabled={loading}
+                  required
+                  onChange={(event: any) => setSubject(event.target.value)}
                 />
               </FloatingLabel>
 
@@ -100,17 +143,36 @@ const Contact = () => {
                   as="textarea"
                   type="message"
                   role="textbox"
+                  required
+                  disabled={loading}
                   ref={textareaRef}
                   onChange={(event: any) => setMessage(event.target.value)}
                 />
               </FloatingLabel>
 
-              <button className="btn btn-primary btn-contact-submit mt-1">
+              <button disabled={loading} className="btn btn-primary btn-contact-submit mt-1">
                 Send Message
               </button>
             </Form>
           </div>
         </div>
+
+        {/* Show Toast Message */}
+        <ToastContainer position="top-end" className="p-3">
+          <Toast show={showSuccess} onClose={toggleShowSuccess} delay={2000}>
+            <Toast.Header>
+              <strong className="me-auto">Send message successfully!</strong>
+            </Toast.Header>
+            <Toast.Body>Hello {name}. Thank you for sending message. I will email you asap!</Toast.Body>
+          </Toast>
+
+          <Toast show={showFail} onClose={toggleShowFail} delay={2000}>
+            <Toast.Header>
+              <strong className="me-auto">Send message failed!</strong>
+            </Toast.Header>
+            <Toast.Body>Sorry {name}. Please try again after!</Toast.Body>
+          </Toast>
+        </ToastContainer>
       </section>
     </>
   );

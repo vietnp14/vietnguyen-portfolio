@@ -43,9 +43,18 @@
           padding: 2.5rem 1.5rem 1rem 1.5rem;
           background-color: var(--input-color);
           color: var(--text-color);
-          border: none;
+          font-size: var(--normal-font-size);
 
+          border: none;
           resize: vertical;
+          border-radius: .5rem;
+        }
+
+        input {
+          &:-internal-autofill-selected {
+            background-color: var(--input-color) !important;
+            color: var(--text-color) !important;
+          }
         }
 
         textarea {

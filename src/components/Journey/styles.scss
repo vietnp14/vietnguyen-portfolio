@@ -12,6 +12,36 @@
           font-weight: var(--font-weight-medium);
           color: var(--primary-color);
           cursor: default;
+
+          &-left {
+            margin-right: 1rem;
+          }
+
+          &-right {
+            margin-left: 1rem;
+          }
+
+          @include small-mobile {
+            &-left {
+              margin-right: 0;
+            }
+  
+            &-right {
+              margin-left: 0;
+            }
+
+            svg {
+              width: 20px;
+              height: 20px;
+            }
+          }
+
+          @include mobile {
+            svg {
+              width: 20px;
+              height: 20px;
+            }
+          }
         }
       }
 

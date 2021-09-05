@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "@iconscout/react-unicons": "^1.1.6",
+    "axios": "^0.21.3",
     "bootstrap": "^5.1.0",
     "gatsby": "^3.13.0",
     "gatsby-link": "^3.13.0",
@@ -33,6 +34,7 @@
     "sass": "^1.38.2"
   },
   "devDependencies": {
+    "@types/axios": "^0.14.0",
     "@types/node": "^16.7.10",
     "@types/react": "^17.0.19",
     "@types/react-dom": "^17.0.9",

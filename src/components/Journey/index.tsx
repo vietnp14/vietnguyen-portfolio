@@ -38,14 +38,14 @@ const Journey = () => {
 
           <div className="journey__content-data">
             <div className="journey__content-data-tabs d-grid">
-              <div className="journey__tabs-button d-flex justify-content-end" style={{ marginRight: '1rem' }}>
+              <div className="journey__tabs-button journey__tabs-button-left d-flex justify-content-end">
                 <UilGraduationCap />&nbsp;
                 Education
               </div>
 
               <div style={{ width: '13px' }} />
 
-              <div className="journey__tabs-button d-flex justify-content-start ml-1" style={{ marginLeft: '1rem' }}>
+              <div className="journey__tabs-button journey__tabs-button-right d-flex justify-content-start ml-1">
                 <UilBriefcaseAlt />&nbsp;
                 Work
               </div>

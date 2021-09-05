@@ -33,7 +33,7 @@ const Stories = () => {
     <>
       <section className="section section-stories" id="stories">
         <div className="stories__content container">
-          <div className="stories__content-social d-grid gap-0">
+          <div className="stories__content-social d-grid">
             {
               socialLinks.map((social) => (
                 <a
@@ -71,15 +71,15 @@ const Stories = () => {
               Contact Me&nbsp;
               <UilMessage />
             </a>
+            <div className="stories__scroll">
+              <a href="#about" className="btn btn-scroll-down" id="btn-scroll-down">
+                <UilMouseAlt />&nbsp;
+                <span>Scroll down&nbsp;</span>
+                <UilArrowDown />
+              </a>
+            </div>
           </div>
 
-          <div className="stories__scroll">
-            <a href="#about" className="btn btn-scroll-down" id="btn-scroll-down">
-              <UilMouseAlt />&nbsp;
-              <span>Scroll down&nbsp;</span>
-              <UilArrowDown />
-            </a>
-          </div>
         </div>
       </section>
     </>
