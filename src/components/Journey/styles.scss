@@ -48,10 +48,12 @@
       &-content {
         .journey__items {
           .journey__item {
+            --bottom-space: 1.5rem;
+
             display: grid;
             grid-template-columns: 1fr max-content 1fr;
             gap: 1rem;
-            padding-bottom: .75rem;
+            padding-bottom: var(--bottom-space);
 
             &-title {
               font-size: var(--normal-font-size);
@@ -87,10 +89,18 @@
             &-line {
               display: block;
               width: 1px;
-              height: 100%;
+              height: calc(100% + var(--bottom-space));
               background-color: var(--primary-color);
 
               transform: translate(6px, -7px);
+            }
+
+            @include tablet {
+              --bottom-space: 2.5rem;
+            }
+
+            @include landscape-tablet {
+              --bottom-space: 2rem;
             }
           }
         }

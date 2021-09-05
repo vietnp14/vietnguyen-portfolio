@@ -144,6 +144,21 @@ img {
       font-size: var(--small-font-size);
       margin-bottom: 2.5rem;
     }
+
+    @include tablet {
+      padding-right: 3rem;
+      padding-left: 3rem;
+    }
+
+    @include landscape-tablet {
+      padding-right: 6rem;
+      padding-left: 6rem;
+    }
+
+    @include desktop {
+      padding-right: 10rem;
+      padding-left: 10rem;
+    }
   }
 
   .btn-scroll-up {

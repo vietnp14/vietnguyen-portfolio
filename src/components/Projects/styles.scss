@@ -19,20 +19,8 @@
         display: flex;
         margin: 0 auto;
 
-        @include small-mobile {
-          width: 250px;
-        }
-
         img {
           border-radius: 1rem;
-        }
-
-        @include tablet {
-          width: 400px;
-        }
-
-        @include desktop {
-          width: 500px;
         }
       }
 
@@ -54,6 +42,37 @@
         &-prev,
         &-next {
           display: none;
+        }
+      }
+
+      @include small-mobile {
+        &__image {
+          width: 250px;
+        }
+      }
+
+      @include tablet {
+        &__image {
+          width: 400px;
+        }
+
+        &__content {
+          &-title {
+            margin-top: 1.75rem;
+            margin-bottom: .75rem;
+          }
+        }
+      }
+
+      @include landscape-tablet {
+        &__image {
+          width: 460px;
+        }
+      }
+
+      @include desktop {
+        &__image {
+          width: 500px;
         }
       }
     }

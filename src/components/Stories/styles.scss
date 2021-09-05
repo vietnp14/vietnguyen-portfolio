@@ -5,10 +5,6 @@
     padding-top: 0;
   }
 
-  @include mobile {
-    height: 100vh;
-  }
-
   .stories__content {
     display: grid;
     gap: 1rem;
@@ -102,7 +98,15 @@
       &-blob {
         order: 1;
         justify-self: center;
-        width: 340px;
+        width: 280px;
+      }
+    }
+
+    @include landscape-tablet {
+      &-blob {
+        order: 1;
+        justify-self: center;
+        width: 350px;
       }
     }
 
@@ -128,7 +132,6 @@
 
   .stories__scroll {
     margin-top: 1rem;
-    min-height: 34px;
 
     .btn-scroll-down {
       @keyframes example {
@@ -153,6 +156,12 @@
       span {
         font-size: var(--small-font-size);
       }
+    }
+  }
+
+  @include mobile {
+    .stories__scroll {
+      min-height: 34px;
     }
   }
 }

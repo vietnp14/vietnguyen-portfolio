@@ -67,5 +67,14 @@
         }
       }
     }
+
+    @include tablet {
+      &__content {
+        &-data {
+          column-gap: 2rem;
+          grid-template-columns: .8fr 1.2fr;
+        }
+      }
+    }
   }
 }

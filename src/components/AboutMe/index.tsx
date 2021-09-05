@@ -26,26 +26,26 @@ const AboutMe = () => {
               <div className="about__info">
                 <div className="about__info-item">
                   <h3 className="about__info-title">1.5+</h3>
-                  <span className="about__info-name">Fullstack Developer </span>
+                  <span className="about__info-name">Fullstack Developer</span>
                 </div>
 
                 <div className="about__info-item">
-                  <h3 className="about__info-title">1.5+</h3>
-                  <span className="about__info-name">Fullstack Developer </span>
+                  <h3 className="about__info-title">4+</h3>
+                  <span className="about__info-name">Projects</span>
                 </div>
 
                 <div className="about__info-item">
-                  <h3 className="about__info-title">1.5+</h3>
-                  <span className="about__info-name">Fullstack Developer </span>
+                  <h3 className="about__info-title">1</h3>
+                  <span className="about__info-name">Project Leader</span>
                 </div>
               </div>
+            </div>
 
-              <div className="about__content-button">
-                <a download href="../../assets/CV-NguyenPhuongViet.pdf" className="btn btn-primary btn-download-cv">
+            <div className="about__content-button">
+              <a download href="../../assets/CV-NguyenPhuongViet.pdf" className="btn btn-primary btn-download-cv">
                   Download My CV&nbsp;
-                  <UilFileDownload />
-                </a>
-              </div>
+                <UilFileDownload />
+              </a>
             </div>
           </div>
         </div>

@@ -56,7 +56,7 @@ const Stories = () => {
               </mask>
               <g mask="url(#mask0)">
                 <path d="M68.1,-19.5C77.1,5.5,65.5,39.9,42.9,55.5C20.3,71,-13.4,67.9,-36,51.1C-58.6,34.3,-70.2,3.8,-62.4,-19.6C-54.6,-43,-27.3,-59.3,1.1,-59.7C29.6,-60.1,59.1,-44.4,68.1,-19.5Z" transform="translate(100 100)" />
-                <image width={170} height={170} x="16" y="22" href="https://res.cloudinary.com/dljtsvoib/image/upload/v1630599178/246b772b64e500def8bf2ea7d90be5de_jqzj6y.jpg" />
+                <image width={170} height={170} x="18" y="18" href="https://res.cloudinary.com/dljtsvoib/image/upload/v1630599178/246b772b64e500def8bf2ea7d90be5de_jqzj6y.jpg" />
               </g>
             </svg>
           </div>
