@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import '~bootstrap/scss/bootstrap';
+@import './button';
+@import './media-query.scss';
+
+:root {
+  /* Header */
+  --header-height: 3.5rem;
+
+  /* ======= Colors ======= */
+  --base-color: 250;
+  --primary-color: hsl(var(--base-color), 35%, 50%);
+  --secondary-color: hsl(var(--base-color), 38%, 28%);
+  --primary-color-alt: hsl(var(--base-color), 57%, 53%);
+  --primary-color-light: hsl(var(--base-color), 92%, 85%);
+
+  --hover-text-color: hsl(var(--base-color), 50%, 50%);
+  --hover-background-color: hsl(var(--base-color), 50%, 90%);
+
+  --title-color: hsl(var(--base-color), 8%, 95%);
+  --text-color: hsl(var(--base-color), 8%, 75%);
+  --text-color-light: hsl(var(--base-color), 8%, 65%);
+  --input-color: hsl(var(--base-color), 29%, 16%);
+  --body-color: hsl(var(--base-color), 30%, 22%);
+
+  --big-font-size: 2rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1.125rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+  --smaller-font-size: .75rem;
+
+  --font-weight-medium: 500;
+  --font-weight-semi-bold: 600;
+}
+
+@include small-mobile {
+  :root {
+    --big-font-size: 1.75rem;
+    --h1-font-size: 1.25rem;
+    --h2-font-size: 1.125rem;
+    --h3-font-size: .938rem;
+    --normal-font-size: .813rem;
+    --small-font-size: .75rem;
+    --smaller-font-size: .675rem;
+  }
+}
+
+@media screen and (min-width: 968px) {
+  :root {
+    --big-font-size: 3rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+    --smaller-font-size: .813rem;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--body-color);
+  color: var(--text-color);
+  font-size: var(--normal-font-size);
+  margin: 0 0 var(--header-height) 0;
+
+  @include tablet {
+    margin: var(--header-height) 0 0 0;
+  }
+
+  @include desktop {
+    margin: var(--header-height) 0 0 0;
+  }
+}
+
+body.light-theme {
+  --primary-color: hsl(var(--base-color), 69%, 60%);
+  --secondary-color: hsl(var(--base-color), 39%, 40%);
+  --title-color: hsl(var(--base-color), 8%, 15%);
+  --text-color: hsl(var(--base-color), 8%, 45%);
+  --input-color: hsl(var(--base-color), 70%, 96%);
+
+  --hover-background-color: #FFF;
+  --hover-text-color: hsl(var(--base-color), 69%, 60%);
+  --body-color: hsl(var(--base-color), 60%, 99%);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--title-color);
+  font-weight: var(--font-weight-semi-bold);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.main {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  flex-direction: column;
+  width: 100%;
+
+  .section {
+    padding: 2rem 0 var(--header-height);
+
+    .container {
+      padding: 0;
+    }
+
+    &__title {
+      text-align: center;
+      font-size: var(--h1-font-size);
+    }
+
+    &__subtitle {
+      display: block;
+      text-align: center;
+      font-size: var(--small-font-size);
+      margin-bottom: 2.5rem;
+    }
+
+    @include tablet {
+      padding-right: 3rem;
+      padding-left: 3rem;
+    }
+
+    @include landscape-tablet {
+      padding-right: 6rem;
+      padding-left: 6rem;
+    }
+
+    @include desktop {
+      padding-right: 10rem;
+      padding-left: 10rem;
+    }
+  }
+
+  .btn-scroll-up {
+    position: fixed;
+    bottom: 5rem;
+    right: 1.5rem;
+    padding: .375rem .5rem;
+
+    border-radius: .5rem;
+    z-index: 10;
+
+    &:hover {
+      color: var(--hover-text-color);
+      background-color: var(--hover-background-color);
+    }
+
+    @include tablet {
+      bottom: 3.5rem;
+      right: 1.8rem;
+    }
+
+    @include landscape-tablet {
+      bottom: 3.5rem;
+      right: 2rem;
+    }
+
+    @include desktop {
+      bottom: 3.5rem;
+      right: 3.75rem;
+    }
+  }
+}

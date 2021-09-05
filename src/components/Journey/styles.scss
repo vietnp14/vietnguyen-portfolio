@@ -1,0 +1,110 @@
+@import '../../sass/media-query';
+
+.section__journey {
+  .journey__content {
+    &-data {
+      &-tabs {
+        margin-bottom: 2.5rem;
+        grid-template-columns: 1fr max-content 1fr;
+
+        .journey__tabs-button {
+          font-size: var(--h3-font-size);
+          font-weight: var(--font-weight-medium);
+          color: var(--primary-color);
+          cursor: default;
+
+          &-left {
+            margin-right: 1rem;
+          }
+
+          &-right {
+            margin-left: 1rem;
+          }
+
+          @include small-mobile {
+            &-left {
+              margin-right: 0;
+            }
+  
+            &-right {
+              margin-left: 0;
+            }
+
+            svg {
+              width: 20px;
+              height: 20px;
+            }
+          }
+
+          @include mobile {
+            svg {
+              width: 20px;
+              height: 20px;
+            }
+          }
+        }
+      }
+
+      &-content {
+        .journey__items {
+          .journey__item {
+            --bottom-space: 1.5rem;
+
+            display: grid;
+            grid-template-columns: 1fr max-content 1fr;
+            gap: 1rem;
+            padding-bottom: var(--bottom-space);
+
+            &-title {
+              font-size: var(--normal-font-size);
+              font-weight: var(--font-weight-medium);
+              margin-bottom: 0;
+            }
+
+            &-subtitle {
+              display: inline-block;
+              font-size: var(--small-font-size);
+              margin-bottom: .5rem;
+            }
+
+            &-calendar {
+              font-size: var(--smaller-font-size);
+              color: var(--text-color-light);
+
+              svg {
+                width: 20px;
+                height: 20px;
+              }
+            }
+
+            &-rounder {
+              display: inline-block;
+              width: 13px;
+              height: 13px;
+              background-color: var(--primary-color);
+
+              border-radius: 50%;
+            }
+
+            &-line {
+              display: block;
+              width: 1px;
+              height: calc(100% + var(--bottom-space));
+              background-color: var(--primary-color);
+
+              transform: translate(6px, -7px);
+            }
+
+            @include tablet {
+              --bottom-space: 2.5rem;
+            }
+
+            @include landscape-tablet {
+              --bottom-space: 2rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

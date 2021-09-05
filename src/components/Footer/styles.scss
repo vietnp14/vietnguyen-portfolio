@@ -1,0 +1,113 @@
+@import '../../sass/media-query';
+
+.footer {
+  padding-top: 2rem;
+
+  &__bg {
+    background-color: var(--primary-color);
+    padding: 2rem 0 3rem;
+
+    @include small-mobile {
+      padding-left: .75rem;
+      padding-right: .75rem;
+    }
+
+    @include mobile {
+      padding-left: .75rem;
+      padding-right: .75rem;
+    }
+  }
+
+  &__content {
+    row-gap: 3rem;
+  }
+
+  &__title {
+    font-size: var(--h1-font-size);
+    color: #FFF;
+    margin-bottom: .25rem;
+  }
+
+  &__subtitle {
+    font-size: var(--small-font-size);
+    color: #FFF;
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5rem;
+    color: #FFF;
+  }
+
+  &__link {
+    color: #FFF;
+
+    &:hover {
+      color: var(--primary-color-light);
+      text-decoration: underline 4px var(--primary-color-light);
+    }
+  }
+
+  &__socials {
+    color: #FFF;
+    display: grid;
+    column-gap: .5rem;
+    grid-template-columns: .1fr .1fr .1fr;
+
+    &-item {
+      padding: .25rem .375rem;
+      width: fit-content;
+      color: #FFF;
+
+      transition: .5s;
+
+      svg {
+        width: 18px;
+        height: 18px;
+      }
+  
+      &:hover {
+        background-color: #FFF;
+        border-radius: .625rem;
+        color: var(--primary-color);
+      }
+    }
+  }
+
+  @include tablet {
+    &__content {
+      grid-template-columns: 1.5fr 1.5fr 1fr;
+    }
+
+    &__links {
+      flex-direction: row;
+      column-gap: 1rem;
+      align-items: center;
+    }
+
+    &__socials {
+      bottom: 0;
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  @include desktop {
+    &__content {
+      grid-template-columns: 1.5fr 1.5fr 1fr;
+    }
+
+    &__links {
+      flex-direction: row;
+      column-gap: 1.5rem;
+      align-items: center;
+    }
+
+    &__socials {
+      bottom: 0;
+      display: flex;
+      align-items: center;
+    }
+  }
+}

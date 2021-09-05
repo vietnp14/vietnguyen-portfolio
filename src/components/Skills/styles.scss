@@ -1,0 +1,38 @@
+@import '../../sass/media-query';
+
+.section-skills {
+  .skills__content {
+    &-data {
+      grid-template-columns: 1fr 1fr 1fr;
+      
+      &-item {
+        text-align: center;
+        color: var(--primary-color);
+
+        .item {
+          &__title {
+            color: var(--title-color);
+            font-size: var(--h5-font-size);
+            font-weight: var(--font-weight-semi-bold);
+          }
+
+          &__icon {
+            border-radius: .5rem;
+
+            img {
+              width: 70px;
+              height: 70px;
+            }
+
+            @include mobile {
+              img {
+                width: 60px;
+                height: 64px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

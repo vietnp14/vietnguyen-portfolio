@@ -1,0 +1,80 @@
+@import '../../sass/media-query';
+
+.section__projects {
+  .projects__content {
+    .carousel {
+      &-indicators {
+        bottom: -4rem;
+
+        button {
+          width: 14px;
+          height: 14px;
+          border-radius: 50%;
+          background-color: var(--primary-color);
+        }
+      }
+
+      &__image {
+        width: 300px;
+        display: flex;
+        margin: 0 auto;
+
+        img {
+          border-radius: 1rem;
+        }
+      }
+
+      &__content {
+        text-align: center;
+
+        &-title {
+          margin-top: 1rem;
+          font-size: var(--h3-font-size);
+        }
+
+        &-subtitle {
+          font-size: var(--small-font-size);
+        }
+      }
+
+      &-control {
+
+        &-prev,
+        &-next {
+          display: none;
+        }
+      }
+
+      @include small-mobile {
+        &__image {
+          width: 250px;
+        }
+      }
+
+      @include tablet {
+        &__image {
+          width: 400px;
+        }
+
+        &__content {
+          &-title {
+            margin-top: 1.75rem;
+            margin-bottom: .75rem;
+          }
+        }
+      }
+
+      @include landscape-tablet {
+        &__image {
+          width: 460px;
+        }
+      }
+
+      @include desktop {
+        &__image {
+          width: 500px;
+        }
+      }
+    }
+  }
+}
