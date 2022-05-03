@@ -50,15 +50,8 @@
 
       .btn-download-cv {
         padding: 1rem 1.25rem;
-        border-radius: .75rem;
         font-weight: var(--font-weight-medium);
         justify-self: center;
-
-        &:hover {
-          color: var(--hover-text-color);
-          background-color: var(--hover-background-color);
-          transition: .5s;
-        }
 
         @include mobile {
           svg {

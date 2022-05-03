@@ -7,21 +7,18 @@
   /* Header */
   --header-height: 3.5rem;
 
-  /* ======= Colors ======= */
-  --base-color: 250;
-  --primary-color: hsl(var(--base-color), 35%, 50%);
-  --secondary-color: hsl(var(--base-color), 38%, 28%);
-  --primary-color-alt: hsl(var(--base-color), 57%, 53%);
-  --primary-color-light: hsl(var(--base-color), 92%, 85%);
+  /* ======= Light Colors ======= */
+  --primary-color: #ffcb74;
+  --darker-color: #111111;
+  --dark-color: #2f2f2f;
+  --text-color: #eeeeee;
+  --light-text-color: #f6f6f6;
 
-  --hover-text-color: hsl(var(--base-color), 50%, 50%);
-  --hover-background-color: hsl(var(--base-color), 50%, 90%);
+  --body-color: var(--dark-color);
+  --title-color: var(--text-color-light);
+  --button-color: var(--primary-color);
+  --input-color: var(--text-color);
 
-  --title-color: hsl(var(--base-color), 8%, 95%);
-  --text-color: hsl(var(--base-color), 8%, 75%);
-  --text-color-light: hsl(var(--base-color), 8%, 65%);
-  --input-color: hsl(var(--base-color), 29%, 16%);
-  --body-color: hsl(var(--base-color), 30%, 22%);
 
   --big-font-size: 2rem;
   --h1-font-size: 1.5rem;
@@ -101,7 +98,7 @@ h1,
 h2,
 h3,
 h4 {
-  color: var(--title-color);
+  color: var(--text-color);
   font-weight: var(--font-weight-semi-bold);
 }
 
@@ -167,13 +164,7 @@ img {
     right: 1.5rem;
     padding: .375rem .5rem;
 
-    border-radius: .5rem;
     z-index: 10;
-
-    &:hover {
-      color: var(--hover-text-color);
-      background-color: var(--hover-background-color);
-    }
 
     @include tablet {
       bottom: 3.5rem;

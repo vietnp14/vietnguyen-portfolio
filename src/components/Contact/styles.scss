@@ -23,7 +23,7 @@
       }
 
       svg {
-        color: var(--primary-color);
+        color: var(--button-color);
         margin-right: .75rem;
         width: 32px;
         height: 32px;
@@ -33,16 +33,12 @@
     &__form {
       gap: 1rem;
 
-      .btn-contact-submit {
-        border-radius: .5rem;
-      }
-
       .form-floating {
         input,
         textarea {
           padding: 2.5rem 1.5rem 1rem 1.5rem;
           background-color: var(--input-color);
-          color: var(--text-color);
+          color: var(--darker-color);
           font-size: var(--normal-font-size);
 
           border: none;
@@ -53,7 +49,7 @@
         input {
           &:-internal-autofill-selected {
             background-color: var(--input-color) !important;
-            color: var(--text-color) !important;
+            color: var(--darker-color) !important;
           }
         }
 
@@ -62,6 +58,7 @@
         }
 
         label {
+          color: var(--darker-color);
           font-size: var(--h3-font-size);
           opacity: 1;
         }

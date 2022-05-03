@@ -5,27 +5,27 @@ import './styles.scss';
 const technicalSkills = [
   {
     title: 'Javascript',
-    icon: <StaticImage src="../../images/javascript.svg" alt="javascript" loading="eager" />,
-  },
-  {
-    title: 'HTML',
-    icon: <StaticImage src="../../images/html.png" alt="javascript" loading="eager" />,
-  },
-  {
-    title: 'CSS',
-    icon: <StaticImage src="../../images/css.png" alt="javascript" loading="eager" />,
-  },
-  {
-    title: 'Angular2+',
     icon: <StaticImage src="../../images/angular.svg" alt="javascript" loading="eager" />,
   },
   {
+    title: 'HTML',
+    icon: <StaticImage src="../../images/angular.svg" alt="html" loading="eager" />,
+  },
+  {
+    title: 'CSS',
+    icon: <StaticImage src="../../images/angular.svg" alt="css" loading="eager" />,
+  },
+  {
+    title: 'Angular2+',
+    icon: <StaticImage src="../../images/angular.svg" alt="angular2+" loading="eager" />,
+  },
+  {
     title: 'Reactjs',
-    icon: <StaticImage src="../../images/react.png" alt="javascript" loading="eager" />,
+    icon: <StaticImage src="../../images/angular.svg" alt="reactjs" loading="eager" />,
   },
   {
     title: 'Nodejs',
-    icon: <StaticImage src="../../images/nodejs.svg" alt="javascript" loading="eager" />,
+    icon: <StaticImage src="../../images/angular.svg" alt="nodejs" loading="eager" />,
   },
 ];
 
@@ -41,7 +41,7 @@ const Skills = () => {
             {
               technicalSkills.map((skill, index) => (
                 <div role="button" key={index} className="skills__content-data-item">
-                  <div className="item__icon">{skill.icon}</div>
+                  <div className="item__icon pb-2">{skill.icon}</div>
                   <div className="item__title">{skill.title}</div>
                 </div>
               ))
