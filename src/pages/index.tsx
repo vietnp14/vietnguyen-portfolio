@@ -49,7 +49,10 @@ const IndexPage = () => {
   return (
     <>
       <title>Phuong Viet Portfolio</title>
+
+      {/* Navbar */}
       <Navbar />
+
       <main className="main">
         {/* Stories Section */}
         <Stories />
@@ -69,13 +72,14 @@ const IndexPage = () => {
         {/* Contact Section */}
         <Contact />
 
-        <a href="#" className="btn btn-primary btn-scroll-up">
+        {/* Scroll Button */}
+        <a className="btn btn-primary btn-scroll-up" href="#">
           <UilArrowUp />
         </a>
       </main>
 
       {/* Footer */}
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };

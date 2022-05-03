@@ -92,7 +92,7 @@ const Navbar = () => {
           </div>
 
           <div>
-            <a
+            {/* <a
               onClick={(e) => {
                 e.stopPropagation();
                 setIsDarkTheme(!isDarkThem);
@@ -101,7 +101,7 @@ const Navbar = () => {
               role="button"
             >
               { isDarkThem ? <UilMoon /> : <UilBrightness />}
-            </a>
+            </a> */}
 
             <a
               onClick={() => handleCollapseToggle()}
