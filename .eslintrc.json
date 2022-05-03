@@ -50,11 +50,13 @@
         "varsIgnorePattern": "^_"
       }
     ],
-    "max-len": ["warn", {
+    "max-len": ["error", {
       "code": 120,
       "ignoreStrings": true,
       "ignoreComments": true
     }],
+    "no-empty-function": false,
+    "react/require-default-props": false,
     "react/no-unescaped-entities": "off",
     "react/button-has-type": "off",
     "react/no-array-index-key": "off",
@@ -72,7 +74,7 @@
     "import/no-unresolved": "off",
     "jsx-a11y/anchor-is-valid": "off",
     "jsx-a11y/click-events-have-key-events": "off",
-    "jsx-a11y/no-static-element-interactions": "off"
+    "jsx-a11y/no-static-element-interactions": "off",
   },
   "overrides": [{
     // enable the rule specifically for TypeScript files

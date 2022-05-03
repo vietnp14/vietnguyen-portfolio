@@ -63,7 +63,7 @@ const Navbar = () => {
     <>
       <header className="header" id="header">
         <nav className="nav d-flex justify-content-between align-items-center">
-          <a onClick={(e) => { e.stopPropagation(); }} href="#" className="nav__logo">Viet Nguyen</a>
+          <a className="nav__logo">Viet Nguyen</a>
           <div ref={navMenu} className="nav__menu" id="nav-menu">
             <ul className="nav__list">
               {
@@ -82,10 +82,7 @@ const Navbar = () => {
                 ))
               }
               <a
-                onClick={(e) => {
-                  e.stopPropagation();
-                  handleCollapseToggle();
-                }}
+                onClick={() => handleCollapseToggle()}
                 className="nav__link nav__close"
                 role="button"
               >
@@ -95,7 +92,7 @@ const Navbar = () => {
           </div>
 
           <div>
-            <a
+            {/* <a
               onClick={(e) => {
                 e.stopPropagation();
                 setIsDarkTheme(!isDarkThem);
@@ -104,13 +101,10 @@ const Navbar = () => {
               role="button"
             >
               { isDarkThem ? <UilMoon /> : <UilBrightness />}
-            </a>
+            </a> */}
 
             <a
-              onClick={(e) => {
-                e.stopPropagation();
-                handleCollapseToggle();
-              }}
+              onClick={() => handleCollapseToggle()}
               className="nav__toggle"
             >
               <UilApps />

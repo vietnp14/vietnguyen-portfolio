@@ -9,7 +9,10 @@
   bottom: 0;
   left: 0;
   padding: 1rem 1.5rem;
-  background-color: var(--body-color);
+
+  color: var(--darker-color);
+  background-color: var(--text-color);
+
 
   &__scroll {
     box-shadow: 0 -1px 4px rgba(0, 0, 0, .15);
@@ -18,16 +21,32 @@
   @include tablet {
     top: 0;
     bottom: unset;
+
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
   }
 
   @include landscape-tablet {
     padding: 1rem 1.8rem;
+
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
   }
 
   @include desktop {
     top: 0;
     bottom: unset;
     padding: 1rem 2rem;
+
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+  }
+
+  @include mobile {
+    bottom: 0;
+
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
   }
 
   @media only screen and (min-width: 1400px) {
@@ -82,7 +101,7 @@
     &__logo,
     &__toggle,
     &__theme {
-      color: var(--title-color);
+      color: var(--darker-color);
       font-weight: var(--font-weight-semi-bold);
       cursor: pointer;
 

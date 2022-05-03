@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { UilOutgoingCall, UilEnvelopes, UilLocationPoint, UilSpinnerAlt } from '@iconscout/react-unicons';
+import { UilOutgoingCall, UilEnvelopes, UilLocationPoint } from '@iconscout/react-unicons';
 import { FloatingLabel, Form, Toast, ToastContainer } from 'react-bootstrap';
 import './styles.scss';
 import axios from 'axios';
@@ -31,7 +31,7 @@ const Contact = () => {
   const [loading, setLoading] = useState(false);
   const [showSuccess, setShowSuccess] = useState(false);
   const [showFail, setShowFail] = useState(false);
-  console.log('Show success : ', showSuccess);
+
   const toggleShowSuccess = () => setShowSuccess(!showSuccess);
   const toggleShowFail = () => setShowFail(!showFail);
 
@@ -71,9 +71,8 @@ const Contact = () => {
     });
 
     return () => {
-      textareaRef.current?.removeEventListener('keyup', (e) => {
-        // eslint-disable-next-line @typescript-eslint/no-unused-vars
-        const _e = e;
+      textareaRef.current?.removeEventListener('keyup', () => {
+        console.log();
       });
     };
   }, []);
