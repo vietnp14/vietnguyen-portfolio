@@ -73,9 +73,9 @@ const IndexPage = () => {
         <Contact />
 
         {/* Scroll Button */}
-        <a className="btn btn-primary btn-scroll-up" href="#">
+        <button className="btn btn-primary btn-scroll-up" onClick={() => window.scrollTo({ top: 0 })}>
           <UilArrowUp />
-        </a>
+        </button>
       </main>
 
       {/* Footer */}
